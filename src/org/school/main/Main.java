@@ -25,7 +25,7 @@ public class Main {
 		}
         
         try {
-			studentService.enrollStudents( "History", "1040" );
+			studentService.enrollStudents( "Math", "1040" );
 		} catch (CourseNotFoundException | StudentNotFoundException e) {
 			System.out.println(e.getMessage());
 		}
@@ -35,5 +35,8 @@ public class Main {
 		} catch (CourseNotFoundException | StudentNotFoundException e) {
 			System.out.println(e.getMessage());
 		}
+        studentService.showAllCourses();
+        System.out.println(" ");
+        studentService.showEnrolledStudents("Math");
     }
 }
